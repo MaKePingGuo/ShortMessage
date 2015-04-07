@@ -30,6 +30,15 @@ public class QuickSearchActivity extends Activity {
 
     public static String mSearchText;
 
+    private static Activity mInstance = null;
+
+    public static void finishQuickSearchActivity() {
+        if (mInstance != null) {
+            mInstance.finish();
+            mInstance = null;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +46,7 @@ public class QuickSearchActivity extends Activity {
 
         PushManager.getInstance().initialize(this.getApplicationContext());
 
+        mInstance = this;
         initUI();
     }
 

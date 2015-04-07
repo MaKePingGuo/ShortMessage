@@ -29,7 +29,6 @@ public class RegisterActivity extends Activity {
     private String mVerification = "";
     private String mRealVerification = "";
     private String mPassword = "";
-//    private String mPasswordConfirm = "";
 
     private static final int VERIFICATION_WAIT_TIME = 60;
     private static final int UPDATE_TIMER = 1;
@@ -45,7 +44,6 @@ public class RegisterActivity extends Activity {
                     mTimernHandler.sendMessageDelayed(
                             mTimernHandler.obtainMessage(UPDATE_TIMER, left - 1), 1000);
                 } else {
-//                    mVerification = "";
                     ((Button) findViewById(R.id.get_verification)).setText(R.string.get_verification);
                     ((Button) findViewById(R.id.get_verification)).setEnabled(true);
                 }
@@ -84,29 +82,6 @@ public class RegisterActivity extends Activity {
             }
         });
 
-//        tv = (TextView) findViewById(R.id.policy_link);
-//        tv.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
-//        tv = (TextView) findViewById(R.id.right_btn);
-//        tv.setVisibility(View.VISIBLE);
-//        tv.setText(R.string.submit);
-//        tv.setTextColor(Color.BLUE);
-//        tv.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (registerCheck()) {
-//                    // TODO
-//                    // register
-//                }
-//            }
-//        });
-//        tv = (TextView) findViewById(R.id.policy_link);
-//        tv.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(RegisterActivity.this, UserAgreementActivity.class);
-//                RegisterActivity.this.startActivity(intent);
-//            }
-//        });
         EditText et = (EditText) findViewById(R.id.edit_text_phone_number);
         et.addTextChangedListener(new TextWatcher() {
             @Override
@@ -152,21 +127,6 @@ public class RegisterActivity extends Activity {
             public void afterTextChanged(Editable arg0) {
             }
         });
-//        et = (EditText) findViewById(R.id.edit_text_password_confirm);
-//        et.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
-//                mPasswordConfirm = arg0.toString().trim();
-//            }
-//
-//            @Override
-//            public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable arg0) {
-//            }
-//        });
         Button btn = (Button) findViewById(R.id.get_verification);
         btn.setOnClickListener(new OnClickListener() {
             @Override
@@ -214,16 +174,6 @@ public class RegisterActivity extends Activity {
             CustomDialog.showMessageDialog(RegisterActivity.this, R.string.password_warning);
             return false;
         }
-//        } else if (TextUtils.isEmpty(mPasswordConfirm)) {
-//            showErrorDialog(R.string.password_confirm_warning);
-//            return false;
-//        } else if (!mPassword.equals(mPasswordConfirm)) {
-//            showErrorDialog(R.string.password_confirm_wrong_warning);
-//            return false;
-//        } else if (!((CheckBox) findViewById(R.id.aggree)).isChecked()) {
-//            showErrorDialog(R.string.policy_warning);
-//            return false;
-//        }
         return true;
     }
 

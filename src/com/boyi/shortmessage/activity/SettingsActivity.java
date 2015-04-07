@@ -169,6 +169,8 @@ public class SettingsActivity extends Activity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 SettingsActivity.this.startActivity(intent);
+                MainActivity.finishMainActivity();
+                SettingsActivity.this.finish();
             }
         });
     }

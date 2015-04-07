@@ -37,11 +37,22 @@ public class MainActivity extends Activity {
     private String mSearchText;
     private static ArrayList<LinearLayout> mContainerList = new ArrayList<LinearLayout>();
 
+    private static Activity mInstance = null;
+
+    public static void finishMainActivity() {
+        if (mInstance != null) {
+            mInstance.finish();
+            mInstance = null;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mInstance = this;
+        QuickSearchActivity.finishQuickSearchActivity();
         initUI();
         doGetList();
     }
