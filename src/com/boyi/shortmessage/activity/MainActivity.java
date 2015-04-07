@@ -93,8 +93,7 @@ public class MainActivity extends Activity {
             public boolean onEditorAction(TextView v, int actionId,
                     KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                    Intent intent = new Intent(MainActivity.this, SearchResultActivity.class);
-                    MainActivity.this.startActivity(intent);
+                    doSearch();
                     return false;
                 }
                 return false;
