@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.boyi.shortmessage.MainActivity" >
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/titlebar" />
+
+    <EditText
+        android:id="@+id/edit_text_search"
+        android:layout_below="@id/titlebar"
+        android:layout_marginTop="5dip"
+        android:drawableLeft="@drawable/edit_text_icon"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:hint="@string/search_local_hint"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" />
+
+    <com.boyi.shortmessage.widget.XListView
+        android:id="@+id/search_result"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:dividerHeight="0dip"
+        android:divider="@android:color/transparent"
+        android:layout_below="@id/edit_text_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

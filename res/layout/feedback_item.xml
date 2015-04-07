@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.boyi.shortmessage.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/account_dev"
+        android:background="@color/dialog_button_bg_normal"
+        android:layout_below="@id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/left"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray" />
+        <TextView
+            android:id="@+id/right"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray" />
+        <TextView
+            android:id="@+id/content"
+            android:layout_below="@id/right"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:textSize="20sp"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>

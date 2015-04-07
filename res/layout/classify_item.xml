@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.boyi.shortmessage.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/account_dev"
+        android:background="@color/dialog_button_bg_normal"
+        android:layout_below="@id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_height="50dip" >
+        <com.zcw.togglebutton.ToggleButton
+            android:id="@+id/item_button"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|right"
+            android:layout_width="80dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dip" />
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/item_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="5dip"
+            android:textSize="20sp"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>

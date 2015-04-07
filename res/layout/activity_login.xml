@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.boyi.shortmessage.MainActivity" >
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/titlebar" />
+
+    <EditText
+        android:id="@+id/edit_text_account"
+        android:layout_below="@id/titlebar"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:drawableLeft="@drawable/edit_text_icon"
+        android:drawablePadding="5dip"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:inputType="phone"
+        android:hint="@string/account_hint"
+        android:layout_width="fill_parent"
+        android:gravity="center_vertical|left"
+        android:layout_height="50dip" />
+
+    <EditText
+        android:id="@+id/edit_text_password"
+        android:layout_below="@id/edit_text_account"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:drawableLeft="@drawable/edit_text_icon"
+        android:drawablePadding="5dip"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:inputType="numberPassword"
+        android:hint="@string/password_hint"
+        android:layout_width="fill_parent"
+        android:gravity="center_vertical|left"
+        android:layout_height="50dip" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_below="@id/edit_text_password"
+        android:layout_height="60dip"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="5dip"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/login_client"
+        android:background="@drawable/blue_btn_bg"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/reset_password"
+        android:layout_below="@id/login"
+        android:layout_height="60dip"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="5dip"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="忘记密码"
+        android:background="@drawable/blue_btn_bg"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" >
+        <TextView
+            android:id="@+id/copy_right"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:text="@string/copy_right" />
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/customer_service_dev"
+        android:layout_above="@id/bottom_line"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" >
+        <TextView
+            android:id="@+id/customer_service_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:text="@string/call_to_register" />
+        <TextView
+            android:id="@+id/customer_service"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/customer_service_hint"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/customer_service_number"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/register"
+        android:visibility="gone"
+        android:layout_above="@id/customer_service_dev"
+        android:layout_height="60dip"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/register_for_try"
+        android:background="@drawable/orange_btn_bg"
+        android:gravity="center" />
+</RelativeLayout>
