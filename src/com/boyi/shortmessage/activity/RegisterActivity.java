@@ -40,7 +40,8 @@ public class RegisterActivity extends Activity {
             case UPDATE_TIMER:
                 int left = (Integer) msg.obj;
                 if (left != 0) {
-                    ((Button) findViewById(R.id.get_verification)).setText(String.valueOf(left));
+                    ((Button) findViewById(R.id.get_verification)).setText(
+                            String.valueOf(left) + "秒后重新获取");
                     mTimernHandler.sendMessageDelayed(
                             mTimernHandler.obtainMessage(UPDATE_TIMER, left - 1), 1000);
                 } else {
