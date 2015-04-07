@@ -61,6 +61,8 @@ public class SettingsActivity extends Activity {
         });
         TextView tv = (TextView) findViewById(R.id.title_text);
         tv.setText(getResources().getString(R.string.app_settings));
+        tv = (TextView) findViewById(R.id.account_right);
+        tv.setText(ShortMessageApp.mUser.Mobile);
 
         final Button small = (Button) findViewById(R.id.small);
         final Button medium = (Button) findViewById(R.id.medium);

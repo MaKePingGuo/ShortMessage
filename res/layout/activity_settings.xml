@@ -36,8 +36,7 @@
             android:gravity="center_vertical|left"
             android:paddingRight="5dip"
             android:textSize="20sp"
-            android:textColor="@android:color/darker_gray"
-            android:text="@string/customer_service_number" />
+            android:textColor="@android:color/darker_gray" />
     </RelativeLayout>
 
     <RelativeLayout
