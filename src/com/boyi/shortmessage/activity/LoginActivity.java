@@ -128,6 +128,6 @@ public class LoginActivity extends Activity {
                             CustomDialog.showMessageDialog(LoginActivity.this, "服务器返回数据错误");
                         }
                     }
-                }, "正在登陆");
+                }, "正在登录");
     }
 }
