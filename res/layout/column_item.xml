@@ -1,16 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
+    android:background="@android:color/transparent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.boyi.shortmessage.MainActivity" >
 
     <RelativeLayout
         android:id="@+id/account_dev"
-        android:background="@color/dialog_button_bg_normal"
+        android:background="@drawable/background_classify_item"
         android:layout_below="@id/titlebar"
         android:layout_width="fill_parent"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/activity_vertical_margin"
         android:layout_height="50dip" >
@@ -18,6 +17,7 @@
             android:id="@+id/item_checkbox"
             android:layout_alignParentLeft="true"
             android:gravity="center_vertical|left"
+            android:textColor="@color/gray_text"
             android:checked="true"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"

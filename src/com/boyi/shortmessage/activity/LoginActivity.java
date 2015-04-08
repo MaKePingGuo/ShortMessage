@@ -46,6 +46,14 @@ public class LoginActivity extends Activity {
         });
         tv = (TextView) findViewById(R.id.title_text);
         tv.setText(getResources().getString(R.string.login_boyi));
+        tv = (TextView) findViewById(R.id.call_number);
+        tv.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppUtils.showDialConfirmDialog(LoginActivity.this);
+            }
+        });
+
         EditText et = (EditText) findViewById(R.id.edit_text_account);
         et.addTextChangedListener(new TextWatcher() {
             @Override

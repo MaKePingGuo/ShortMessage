@@ -32,13 +32,12 @@
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_width="wrap_content"
+        android:layout_width="50dip"
         android:layout_height="fill_parent"
         android:layout_alignParentRight="true"
-        android:paddingLeft="6dp"
-        android:paddingRight="6dp"
-        android:contentDescription="@null"
-        android:scaleType="centerInside" />
+        android:scaleType="centerInside"
+        android:padding="10dip"
+        android:contentDescription="@null" />
 
     <TextView
         android:id="@+id/bottom_line"

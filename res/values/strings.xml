@@ -18,7 +18,7 @@
     <string name="password_hint">6-32位密码</string>
     <string name="copy_right">Copyright © 2015 Bozes inc. All right reserved.</string>
     <string name="call_to_register">或致电开通：</string>
-    <string name="customer_service_number">01084827390</string>
+    <string name="customer_service_number">010-84827390</string>
     <string name="password_warning">请输入密码</string>
     <string name="account_warning">请输入正确的手机号</string>
     <string name="password_confirm_warning">请输入确认密码</string>
@@ -46,7 +46,7 @@
     <string name="about_us">关于我们</string>
     <string name="about_boyi">关于博易资讯</string>
     <string name="announcement_hint">博易资讯声明</string>
-    <string name="announcement_content">博易资讯声明正文第一行\n\n声明第二行</string>
+    <string name="announcement_content">博易资讯以严谨的态度为您提供“包装材料”资讯服务。保证客户权益是我们的责任\n您注册账号时填写的任何信息，只作为博易资讯与您沟通交流使用，我们不会向第三方泄露您的任何个人资料。</string>
     <string name="feedback">意见&#38;投诉</string>
     <string name="check_update">检查版本更新</string>
     <string name="call_hint">打个电话给您的客服为您提供更多帮助</string>

@@ -10,4 +10,5 @@
     <color name="dialog_divider">#dbdbdb</color>
     <color name="gray_background">#ECECEC</color>
     <color name="gray_text">#535353</color>
+    <color name="blue_text">#0040BE</color>
 </resources>

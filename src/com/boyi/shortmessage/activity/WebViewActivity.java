@@ -37,6 +37,16 @@ public abstract class WebViewActivity extends Activity {
         settings.setDefaultTextEncodingName("utf-8");
 
         wv.loadData(AppUtils.getAssetFileContent(this, getFileName()), "text/html; charset=UTF-8", null);
+
+        tv = (TextView) findViewById(R.id.call_number);
+        if (tv != null) {
+            tv.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AppUtils.showDialConfirmDialog(WebViewActivity.this);
+                }
+            });
+        }
     }
 
     abstract int getTitleId();

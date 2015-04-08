@@ -1,13 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
+    android:background="@android:color/transparent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.boyi.shortmessage.MainActivity" >
 
     <RelativeLayout
         android:id="@+id/account_dev"
-        android:background="@color/dialog_button_bg_normal"
+        android:background="@drawable/background_input"
         android:layout_below="@id/titlebar"
         android:layout_width="fill_parent"
         android:layout_marginLeft="@dimen/activity_vertical_margin"
@@ -19,7 +19,7 @@
             android:layout_alignParentTop="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dip"
+            android:padding="10dip"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray" />
         <TextView
@@ -28,7 +28,7 @@
             android:layout_alignParentTop="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dip"
+            android:padding="10dip"
             android:textSize="12sp"
             android:textColor="@android:color/darker_gray" />
         <TextView
@@ -39,9 +39,11 @@
             android:layout_alignParentBottom="true"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:padding="5dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingBottom="10dip"
             android:textSize="20sp"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/gray_text" />
     </RelativeLayout>
 
 </RelativeLayout>

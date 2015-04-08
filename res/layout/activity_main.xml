@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:background="@android:color/white"
+    android:background="@color/gray_background"
     tools:context="com.boyi.shortmessage.MainActivity" >
 
     <include
@@ -17,24 +17,40 @@
         android:layout_marginBottom="10dip"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:drawableLeft="@drawable/edit_text_icon"
+        android:background="@drawable/background_search_edit_text"
+        android:paddingRight="40dip"
+        android:paddingLeft="5dip"
         android:singleLine="true"
         android:imeOptions="actionSearch"
         android:inputType="text"
         android:hint="@string/search_hint"
-        android:gravity="center"
+        android:gravity="center_vertical|left"
         android:layout_width="fill_parent"
-        android:layout_height="50dip" />
+        android:layout_height="40dip" />
+    <ImageView
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignRight="@id/edit_text_search"
+        android:layout_alignTop="@id/edit_text_search"
+        android:layout_alignBottom="@id/edit_text_search"
+        android:padding="10dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_search" />
+    
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
         android:layout_below="@id/titlebar"
         android:layout_above="@id/edit_text_search">
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:orientation="vertical" >
         </LinearLayout>

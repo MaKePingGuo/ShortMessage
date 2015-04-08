@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background"
+    android:background="@color/gray_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusable="true"
@@ -13,24 +13,34 @@
 
     <EditText
         android:id="@+id/edit_text_search"
+        android:background="@drawable/background_search_edit_text"
+        android:paddingLeft="40dip"
         android:layout_below="@id/titlebar"
         android:layout_marginTop="5dip"
-        android:drawableLeft="@drawable/edit_text_icon"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:singleLine="true"
         android:imeOptions="actionSearch"
         android:inputType="text"
         android:hint="@string/search_local_hint"
-        android:gravity="center"
+        android:gravity="center_vertical|left"
         android:layout_width="fill_parent"
-        android:layout_height="50dip" />
+        android:layout_height="40dip" />
+    <ImageView
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignLeft="@id/edit_text_search"
+        android:layout_alignTop="@id/edit_text_search"
+        android:layout_alignBottom="@id/edit_text_search"
+        android:padding="10dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_search" />
 
     <com.boyi.shortmessage.widget.XListView
         android:id="@+id/search_result"
         android:background="@android:color/transparent"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
         android:dividerHeight="0dip"
         android:divider="@android:color/transparent"
         android:layout_below="@id/edit_text_search"

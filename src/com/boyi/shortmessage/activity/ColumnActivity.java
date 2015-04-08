@@ -6,6 +6,7 @@ import com.boyi.shortmessage.R;
 import com.boyi.shortmessage.ShortMessageApp;
 import com.boyi.shortmessage.adapter.ColumnListAdapter;
 import com.boyi.shortmessage.model.UserAndClassifies;
+import com.boyi.shortmessage.utils.AppUtils;
 import com.boyi.shortmessage.widget.CustomDialog;
 
 import android.app.Activity;
@@ -38,6 +39,13 @@ public class ColumnActivity extends Activity {
         });
         TextView tv = (TextView) findViewById(R.id.title_text);
         tv.setText(getResources().getString(R.string.column_title));
+        tv = (TextView) findViewById(R.id.call_number);
+        tv.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppUtils.showDialConfirmDialog(ColumnActivity.this);
+            }
+        });
 
         ListView lv = (ListView) findViewById(R.id.list_view);
         lv.setAdapter(new ColumnListAdapter(this));

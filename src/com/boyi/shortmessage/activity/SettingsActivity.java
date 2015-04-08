@@ -6,19 +6,13 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 
-import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.RetryPolicy;
-import com.android.volley.VolleyError;
 import com.boyi.shortmessage.Constants;
 import com.boyi.shortmessage.R;
 import com.boyi.shortmessage.ShortMessageApp;
 import com.boyi.shortmessage.model.UpdateVersion;
 import com.boyi.shortmessage.utils.AppUtils;
-import com.boyi.shortmessage.utils.DownloadRequest;
 import com.boyi.shortmessage.utils.SPUtils;
 import com.boyi.shortmessage.widget.CustomDialog;
 import com.boyi.shortmessage.widget.DisplayDaySelectWindow;
@@ -63,6 +57,15 @@ public class SettingsActivity extends Activity {
         tv.setText(getResources().getString(R.string.app_settings));
         tv = (TextView) findViewById(R.id.account_right);
         tv.setText(ShortMessageApp.mUser.Mobile);
+        tv = (TextView) findViewById(R.id.call_number);
+        tv.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppUtils.showDialConfirmDialog(SettingsActivity.this);
+            }
+        });
+        tv = (TextView) findViewById(R.id.check_update_right);
+        tv.setText("V" + AppUtils.getVersionName(SettingsActivity.this));
 
         final Button small = (Button) findViewById(R.id.small);
         final Button medium = (Button) findViewById(R.id.medium);
@@ -286,7 +289,6 @@ public class SettingsActivity extends Activity {
 
         @Override
         protected Boolean doInBackground(String... params) {
-            String result = "";
             boolean write_success = false;
             InputStream is = getIs(mUrl);
             mFile = new File(Environment.getExternalStorageDirectory().getAbsoluteFile() + "/apk.apk");

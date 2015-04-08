@@ -87,6 +87,13 @@ public class RegisterActivity extends Activity {
             @Override
             public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
                 mAccount = arg0.toString().trim();
+                if (TextUtils.isEmpty(mAccount)) {
+                    ((ImageView) findViewById(R.id.account_icon)).setImageResource(
+                            R.drawable.icon_account_empty);
+                } else {
+                    ((ImageView) findViewById(R.id.account_icon)).setImageResource(
+                            R.drawable.icon_account_not_empty);
+                }
             }
 
             @Override
@@ -97,11 +104,19 @@ public class RegisterActivity extends Activity {
             public void afterTextChanged(Editable arg0) {
             }
         });
+
         et = (EditText) findViewById(R.id.edit_text_verification);
         et.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
                 mVerification = arg0.toString().trim();
+                if (TextUtils.isEmpty(mVerification)) {
+                    ((ImageView) findViewById(R.id.verification_icon)).setImageResource(
+                            R.drawable.icon_verification_empty);
+                } else {
+                    ((ImageView) findViewById(R.id.verification_icon)).setImageResource(
+                            R.drawable.icon_verification_not_empty);
+                }
             }
 
             @Override
@@ -112,11 +127,19 @@ public class RegisterActivity extends Activity {
             public void afterTextChanged(Editable arg0) {
             }
         });
+
         et = (EditText) findViewById(R.id.edit_text_password);
         et.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
                 mPassword = arg0.toString().trim();
+                if (TextUtils.isEmpty(mPassword)) {
+                    ((ImageView) findViewById(R.id.password_icon)).setImageResource(
+                            R.drawable.icon_password_empty);
+                } else {
+                    ((ImageView) findViewById(R.id.password_icon)).setImageResource(
+                            R.drawable.icon_password_not_empty);
+                }
             }
 
             @Override

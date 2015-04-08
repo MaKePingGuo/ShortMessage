@@ -72,7 +72,7 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="@string/login_client"
-        android:background="@drawable/blue_btn_bg"
+        android:background="@drawable/btn_blue_bg"
         android:gravity="center" />
 
     <Button
@@ -87,7 +87,7 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="忘记密码"
-        android:background="@drawable/blue_btn_bg"
+        android:background="@drawable/btn_blue_bg"
         android:gravity="center" />
 
     <RelativeLayout
@@ -133,7 +133,7 @@
             android:textColor="@color/gray_text"
             android:text="@string/call_to_register" />
         <TextView
-            android:id="@+id/customer_service"
+            android:id="@+id/call_number"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:gravity="center_vertical"
@@ -156,6 +156,6 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="@string/register_for_try"
-        android:background="@drawable/orange_btn_bg"
+        android:background="@drawable/btn_orange_bg"
         android:gravity="center" />
 </RelativeLayout>

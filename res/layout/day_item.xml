@@ -1,27 +1,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
+    android:background="@android:color/transparent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.boyi.shortmessage.MainActivity" >
 
     <RelativeLayout
         android:id="@+id/top_dev"
-        android:background="@color/dialog_button_bg_normal"
+        android:background="@drawable/background_input"
         android:layout_below="@id/titlebar"
         android:layout_width="fill_parent"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginTop="5dip"
         android:layout_marginLeft="@dimen/activity_vertical_margin"
         android:layout_marginRight="@dimen/activity_vertical_margin"
-        android:layout_height="50dip" >
+        android:layout_height="60dip" >
         <ImageView
             android:id="@+id/expend_icon"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/arrow_icon_down"
-            android:scaleType="fitXY"
-            android:padding="10dip"
-            android:layout_width="50dip"
-            android:layout_height="50dip" />
+            android:src="@drawable/icon_arrow_down"
+            android:scaleType="fitCenter"
+            android:padding="15dip"
+            android:layout_width="60dip"
+            android:layout_height="60dip" />
         <RelativeLayout
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/expend_icon"
@@ -37,6 +37,7 @@
                     android:id="@+id/day"
                     android:text="星期"
                     android:textSize="20sp"
+                    android:textColor="@color/blue_text"
                     android:layout_width="wrap_content"
                     android:layout_height="0dip"
                     android:layout_weight="2"
@@ -45,6 +46,7 @@
                     android:id="@+id/date"
                     android:textSize="12sp"
                     android:text="日期"
+                    android:textColor="@color/gray_text"
                     android:layout_width="wrap_content"
                     android:layout_height="0dip"
                     android:layout_weight="1"
@@ -53,11 +55,12 @@
             <TextView
                 android:id="@+id/message_count"
                 android:layout_toRightOf="@id/day_dev"
-                android:paddingLeft="5dip"
+                android:background="@drawable/icon_message_count"
+                android:gravity="center"
+                android:layout_margin="20dip"
                 android:text="0"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:gravity="center_vertical" />
+                android:layout_width="20dip"
+                android:layout_height="60dip" />
         </RelativeLayout>
     </RelativeLayout>
     <LinearLayout

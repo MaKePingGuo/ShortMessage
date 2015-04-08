@@ -8,10 +8,15 @@ import java.nio.charset.Charset;
 import java.text.DecimalFormat;
 
 import com.boyi.shortmessage.R;
+import com.boyi.shortmessage.widget.CustomDialog;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 
 public class AppUtils {
 
@@ -110,5 +115,26 @@ public class AppUtils {
             verification += String.valueOf(((int)(Math.random() * 10)) % 10);
         }
         return verification;
+    }
+
+    public static void showDialConfirmDialog(final Activity activity) {
+        CustomDialog cd = new CustomDialog(activity);
+        cd.setTitle("拨打客服电话");
+        cd.setMessage("确认拨打客服电话： " + activity.getResources().getString(R.string.customer_service_number));
+        cd.setPositiveButton("拨打", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Uri uri = Uri.parse("tel:" + activity.getResources().getString(R.string.customer_service_number));
+                Intent intent = new Intent(Intent.ACTION_CALL, uri);
+                activity.startActivity(intent);  
+            }
+        });
+        cd.setNegativeButton(activity.getResources().getString(android.R.string.cancel),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+        });
+        cd.show();
     }
 }

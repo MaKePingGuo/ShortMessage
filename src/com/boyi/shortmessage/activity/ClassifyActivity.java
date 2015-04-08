@@ -2,6 +2,7 @@ package com.boyi.shortmessage.activity;
 
 import com.boyi.shortmessage.R;
 import com.boyi.shortmessage.adapter.ClassifyListAdapter;
+import com.boyi.shortmessage.utils.AppUtils;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -34,5 +35,12 @@ public class ClassifyActivity extends Activity {
 
         ListView lv = (ListView) findViewById(R.id.list_view);
         lv.setAdapter(new ClassifyListAdapter(this));
+        tv = (TextView) findViewById(R.id.call_number);
+        tv.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppUtils.showDialConfirmDialog(ClassifyActivity.this);
+            }
+        });
     }
 }

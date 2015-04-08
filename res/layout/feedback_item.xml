@@ -1,13 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
+    android:background="@android:color/transparent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.boyi.shortmessage.MainActivity" >
 
     <RelativeLayout
         android:id="@+id/account_dev"
-        android:background="@color/dialog_button_bg_normal"
+        android:background="@color/white"
         android:layout_below="@id/titlebar"
         android:layout_width="fill_parent"
         android:layout_marginTop="5dip"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:padding="5dip"
             android:textSize="20sp"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/gray_text" />
     </RelativeLayout>
 
 </RelativeLayout>

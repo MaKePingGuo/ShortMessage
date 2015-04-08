@@ -16,12 +16,13 @@
         android:layout_marginTop="10dip"
         android:layout_alignParentBottom="true"
         android:padding="5dip"
+        android:gravity="center_vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="50dip" >
         <Button
             android:id="@+id/feedback_btn"
             android:layout_alignParentRight="true"
-            android:background="@drawable/blue_btn_bg"
+            android:background="@drawable/btn_blue_bg"
             android:text="发送"
             android:textSize="20sp"
             android:textColor="@android:color/white"
@@ -29,13 +30,15 @@
             android:layout_width="wrap_content" />
         <EditText
             android:id="@+id/edit_text_feedback"
-            android:layout_marginLeft="5dip"
+            android:background="@drawable/background_input"
+            android:paddingLeft="5dip"
+            android:layout_marginRight="5dip"
             android:layout_alignParentLeft="true"
             android:layout_toLeftOf="@id/feedback_btn"
             android:singleLine="true"
             android:imeOptions="actionSearch"
             android:inputType="text"
-            android:hint="@string/search_hint"
+            android:hint="请输入反馈意见"
             android:gravity="center_vertical|left"
             android:layout_width="fill_parent"
             android:layout_height="50dip" />

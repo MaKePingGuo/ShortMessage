@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
         TextView tv = (TextView) findViewById(R.id.title_text);
         tv.setText(getResources().getString(R.string.boyi_shortmessage));
         ImageView iv = (ImageView) findViewById(R.id.titlebar_back);
-        iv.setImageResource(R.drawable.classify_icon);
+        iv.setImageResource(R.drawable.icon_classify);
         iv.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
         });
         iv = (ImageView) findViewById(R.id.right_btn);
         iv.setVisibility(View.VISIBLE);
-        iv.setImageResource(R.drawable.settings_icon);
+        iv.setImageResource(R.drawable.icon_settings);
         iv.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,7 +115,7 @@ public class MainActivity extends Activity {
     private void showDayList() {
         LinearLayout ll = (LinearLayout) findViewById(R.id.container);
         for (int i = 0; i < mDayList.GroupResult.size(); i++) {
-            View view = (View) MainActivity.this.getLayoutInflater().inflate(R.layout.day_item, null);
+            final View view = (View) MainActivity.this.getLayoutInflater().inflate(R.layout.day_item, null);
             TextView tv = (TextView) view.findViewById(R.id.day);
             tv.setText(mDayList.GroupResult.get(i).Week);
             tv = (TextView) view.findViewById(R.id.date);
@@ -139,6 +139,9 @@ public class MainActivity extends Activity {
                         expendList(container,
                                 Constants.mGson.fromJson(messagelistString, MessageList.class),
                                 mDayList.GroupResult.get(index).Date);
+                        ((ImageView) view.findViewById(R.id.expend_icon)).setImageResource(
+                                container.getVisibility() == View.GONE ?
+                                        R.drawable.icon_arrow_down : R.drawable.icon_arrow_up);
                     }
                 }
             });
