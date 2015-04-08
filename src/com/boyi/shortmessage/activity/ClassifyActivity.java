@@ -1,5 +1,6 @@
 package com.boyi.shortmessage.activity;
 
+import com.baidu.mobstat.StatService;
 import com.boyi.shortmessage.R;
 import com.boyi.shortmessage.adapter.ClassifyListAdapter;
 import com.boyi.shortmessage.utils.AppUtils;
@@ -42,5 +43,19 @@ public class ClassifyActivity extends Activity {
                 AppUtils.showDialConfirmDialog(ClassifyActivity.this);
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        StatService.onPageStart(this, this.getClass().getSimpleName());
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        StatService.onPageEnd(this, this.getClass().getSimpleName());
     }
 }

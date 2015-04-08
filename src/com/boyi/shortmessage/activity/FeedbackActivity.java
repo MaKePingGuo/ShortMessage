@@ -3,6 +3,7 @@ package com.boyi.shortmessage.activity;
 import java.net.URLEncoder;
 
 import com.android.volley.Response.Listener;
+import com.baidu.mobstat.StatService;
 import com.boyi.shortmessage.Constants;
 import com.boyi.shortmessage.R;
 import com.boyi.shortmessage.ShortMessageApp;
@@ -137,5 +138,19 @@ public class FeedbackActivity extends Activity {
                         et.setText("");
                     }
                 }, "正在发送");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        StatService.onPageStart(this, this.getClass().getSimpleName());
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        StatService.onPageEnd(this, this.getClass().getSimpleName());
     }
 }
