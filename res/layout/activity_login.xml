@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
+    android:background="@color/gray_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.boyi.shortmessage.MainActivity" >
@@ -11,12 +11,12 @@
 
     <EditText
         android:id="@+id/edit_text_account"
+        android:background="@drawable/background_input"
         android:layout_below="@id/titlebar"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:drawableLeft="@drawable/edit_text_icon"
-        android:drawablePadding="5dip"
+        android:paddingLeft="50dip"
         android:singleLine="true"
         android:imeOptions="actionSearch"
         android:inputType="phone"
@@ -24,14 +24,24 @@
         android:layout_width="fill_parent"
         android:gravity="center_vertical|left"
         android:layout_height="50dip" />
+    <ImageView
+        android:id="@+id/account_icon"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignLeft="@id/edit_text_account"
+        android:layout_alignTop="@id/edit_text_account"
+        android:layout_alignBottom="@id/edit_text_account"
+        android:padding="10dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_account_empty" />
 
     <EditText
         android:id="@+id/edit_text_password"
+        android:background="@drawable/background_input"
         android:layout_below="@id/edit_text_account"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:drawableLeft="@drawable/edit_text_icon"
-        android:drawablePadding="5dip"
+        android:paddingLeft="50dip"
         android:singleLine="true"
         android:imeOptions="actionSearch"
         android:inputType="numberPassword"
@@ -39,11 +49,21 @@
         android:layout_width="fill_parent"
         android:gravity="center_vertical|left"
         android:layout_height="50dip" />
+    <ImageView
+        android:id="@+id/password_icon"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignLeft="@id/edit_text_password"
+        android:layout_alignTop="@id/edit_text_password"
+        android:layout_alignBottom="@id/edit_text_password"
+        android:padding="10dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_password_empty" />
 
     <Button
         android:id="@+id/login"
         android:layout_below="@id/edit_text_password"
-        android:layout_height="60dip"
+        android:layout_height="50dip"
         android:layout_width="fill_parent"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -58,7 +78,7 @@
     <Button
         android:id="@+id/reset_password"
         android:layout_below="@id/login"
-        android:layout_height="60dip"
+        android:layout_height="50dip"
         android:layout_width="fill_parent"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -82,6 +102,8 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:textColor="@color/gray_text"
             android:layout_alignParentLeft="true"
             android:text="@string/copy_right" />
         <TextView
@@ -90,6 +112,8 @@
             android:layout_height="fill_parent"
             android:gravity="center_vertical"
             android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/gray_text"
             android:layout_alignParentRight="true" />
     </RelativeLayout>
 
@@ -99,13 +123,14 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_width="fill_parent"
+        android:gravity="center_horizontal"
         android:layout_height="50dip" >
         <TextView
             android:id="@+id/customer_service_hint"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:gravity="center_vertical"
-            android:layout_alignParentLeft="true"
+            android:textColor="@color/gray_text"
             android:text="@string/call_to_register" />
         <TextView
             android:id="@+id/customer_service"
@@ -115,8 +140,8 @@
             android:layout_toRightOf="@id/customer_service_hint"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:text="@string/customer_service_number"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/dialog_red"
+            android:text="@string/customer_service_number" />
     </RelativeLayout>
 
     <Button

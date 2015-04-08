@@ -8,4 +8,6 @@
     <color name="dialog_button_bg_normal">#e2e2e2</color>
     <color name="dialog_title_normal_color">#3898ff</color>
     <color name="dialog_divider">#dbdbdb</color>
+    <color name="gray_background">#ECECEC</color>
+    <color name="gray_text">#535353</color>
 </resources>

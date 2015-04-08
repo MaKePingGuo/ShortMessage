@@ -16,7 +16,7 @@
     <string name="register_for_try">注册会员，试用</string>
     <string name="account_hint">11位手机号码</string>
     <string name="password_hint">6-32位密码</string>
-    <string name="copy_right">Copyright</string>
+    <string name="copy_right">Copyright © 2015 Bozes inc. All right reserved.</string>
     <string name="call_to_register">或致电开通：</string>
     <string name="customer_service_number">01084827390</string>
     <string name="password_warning">请输入密码</string>
