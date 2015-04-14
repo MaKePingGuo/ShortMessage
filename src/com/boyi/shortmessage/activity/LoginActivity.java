@@ -112,12 +112,6 @@ public class LoginActivity extends Activity {
                 }
             }
         });
-//        bt = (Button) findViewById(R.id.register);
-//        bt.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//            }
-//        });
         bt = (Button) findViewById(R.id.reset_password);
         bt.setOnClickListener(new OnClickListener() {
             @Override

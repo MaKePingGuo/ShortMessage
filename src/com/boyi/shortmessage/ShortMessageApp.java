@@ -1,14 +1,18 @@
 package com.boyi.shortmessage;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.Request.Method;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
+import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.boyi.shortmessage.model.Classify;
@@ -64,26 +68,38 @@ public class ShortMessageApp extends Application {
                         String error = "";
                         if (arg0.networkResponse == null) {
                             error = arg0.getMessage();
-                        } else  if (arg0.networkResponse.statusCode == 417) {
-                            error = new String(arg0.networkResponse.data);
                         } else {
-                            error = arg0.getLocalizedMessage();
+                            int statuscode = arg0.networkResponse.statusCode;
+                            switch (statuscode) {
+                            case 500:
+                                error = "用户不存在";
+                                break;
+                            case 501:
+                                error = "用户名或密码错误";
+                                break;
+                            case 502:
+                                error = "用户已过期";
+                                break;
+                            case 503:
+                                error = "用户名已经存在";
+                                break;
+                            case 504:
+                                error = "密码不能为空";
+                                break;
+                            default:
+                                break;
+                            }
                         }
-                        Log.d(Constants.TAG, "error result: " + error);
+                        if (TextUtils.isEmpty(error)) {
+                          error = arg0.getLocalizedMessage();
+                        }
                         if (TextUtils.isEmpty(error)) {
                             error = "操作失败";
                         }
+                        Log.d(Constants.TAG, "error result: " + error);
                         CustomDialog.showMessageDialog(activity, error);
                     }
-                }) {
-            @Override
-            public RetryPolicy getRetryPolicy() {
-                RetryPolicy retryPolicy = new DefaultRetryPolicy(60 * 1000,
-                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-                return retryPolicy;
-            }
-        };
+                });
         sr.setTag(activity);
         ShortMessageApp.mRequestQueue.add(sr);
         mCD = CustomDialog.showLoading(activity, title, new OnCancelListener() {
