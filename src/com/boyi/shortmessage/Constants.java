@@ -17,16 +17,18 @@ public class Constants {
 //    }
 
     private static final String DBG_HOST = "http://christiank.xicp.net:44061/";
+    private static final String PRD_HOST = "http://115.28.162.37:8001/";
+    private static final String URL_HOST = PRD_HOST;
 
-    public static final String URL_LOGIN = DBG_HOST + "AppuserService.svc/Login/";
-    public static final String URL_REGISTER = DBG_HOST + "AppuserService.svc/Register/";
-    public static final String URL_UPDATE_SETTINGS = DBG_HOST + "AppuserService.svc/UpdateSetting/";
-    public static final String URL_SELECTED_COLUMNS = DBG_HOST + "AppuserService.svc/SelectedColumns/";
-    public static final String URL_RESET_PASSWORD = DBG_HOST + "AppuserService.svc/ResetPassword/";
-    public static final String URL_GET_DAY_LIST = DBG_HOST + "SmsService.svc/Group/";
-    public static final String URL_GET_DAY_INFO_LIST = DBG_HOST + "SmsService.svc/Download/";
-    public static final String URL_SEARCH_MESSAGE = DBG_HOST + "SmsService.svc/Search/";
-    public static final String URL_ADD_FEEDBACK = DBG_HOST + "FeedbackService.svc/Add/";
-    public static final String URL_GET_FEEDBACK = DBG_HOST + "FeedbackService.svc/Feedback/";
-    public static final String URL_GET_LATEST_VERSION = DBG_HOST + "VersionService.svc/GetLatestVersion";
+    public static final String URL_LOGIN = URL_HOST + "AppuserService.svc/Login/";
+    public static final String URL_REGISTER = URL_HOST + "AppuserService.svc/Register/";
+    public static final String URL_UPDATE_SETTINGS = URL_HOST + "AppuserService.svc/UpdateSetting/";
+    public static final String URL_SELECTED_COLUMNS = URL_HOST + "AppuserService.svc/SelectedColumns/";
+    public static final String URL_RESET_PASSWORD = URL_HOST + "AppuserService.svc/ResetPassword/";
+    public static final String URL_GET_DAY_LIST = URL_HOST + "SmsService.svc/Group/";
+    public static final String URL_GET_DAY_INFO_LIST = URL_HOST + "SmsService.svc/Download/";
+    public static final String URL_SEARCH_MESSAGE = URL_HOST + "SmsService.svc/Search/";
+    public static final String URL_ADD_FEEDBACK = URL_HOST + "FeedbackService.svc/Add/";
+    public static final String URL_GET_FEEDBACK = URL_HOST + "FeedbackService.svc/Feedback/";
+    public static final String URL_GET_LATEST_VERSION = URL_HOST + "VersionService.svc/GetLatestVersion";
 }
