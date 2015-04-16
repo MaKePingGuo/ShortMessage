@@ -17,7 +17,7 @@ public class Constants {
 //    }
 
     private static final String DBG_HOST = "http://christiank.xicp.net:44061/";
-    private static final String PRD_HOST = "http://115.28.162.37:8001/";
+    private static final String PRD_HOST = "http://223.223.176.51:8001/";
     private static final String URL_HOST = PRD_HOST;
 
     public static final String URL_LOGIN = URL_HOST + "AppuserService.svc/Login/";
